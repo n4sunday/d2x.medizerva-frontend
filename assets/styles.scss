@@ -47,6 +47,7 @@ body {
 }
 
 .Home {
+  font-family: Prompt;
   .main {
     .home-picture {
       min-width: 100vw;
@@ -61,5 +62,116 @@ body {
         font-family: Prompt;
       }
     }
+  }
+  .service {
+    background-color: #f3f3f3;
+    height: 100vh;
+    .content {
+      .service-component {
+        @extend %userNo;
+        border: 0.5px solid #d1d1d1;
+        width: 300px;
+        height: 380px;
+        background-color: #fff;
+        .icon {
+          transition: 500ms linear;
+        }
+        .icon:hover {
+          opacity: 0.7;
+          transition: 500ms linear;
+        }
+        .title:hover {
+          color: #4dc9ff;
+          transition: 500ms linear;
+        }
+        .content {
+          color: #4f5052;
+        }
+      }
+      .service-component:hover {
+        box-shadow: 0px 0px 2px 0.5px rgba(0,0,0,0.1);
+      }
+      
+      .icon {
+        width: 180px;
+      }
+    }
+  }
+}
+
+$sizes-font: 10, 12, 14, 16, 18, 20, 22, 23, 24, 25, 26, 28, 30, 32, 34, 40, 46;
+@each $size in $sizes-font {
+  .f-#{$size} {
+    font-size: #{$size}px;
+  }
+}
+$sizes: 1, 2, 3, 4, 5, 10, 12, 14, 15, 16, 18, 20, 22, 24, 25, 26, 28, 30, 32,
+  35, 38, 40, 42, 50, 55, 60, 65, 70;
+@each $size in $sizes {
+  // Margin
+  .ma-#{$size} {
+    margin: #{$size}px !important;
+  }
+  .mx-#{$size} {
+    margin-left: #{$size}px !important;
+    margin-right: #{$size}px !important;
+  }
+  .my-#{$size} {
+    margin-top: #{$size}px !important;
+    margin-bottom: #{$size}px !important;
+  }
+  .ml-#{$size} {
+    margin-left: #{$size}px !important;
+  }
+  .mr-#{$size} {
+    margin-right: #{$size}px !important;
+  }
+  .mt-#{$size} {
+    margin-top: #{$size}px !important;
+  }
+  .mb-#{$size} {
+    margin-bottom: #{$size}px !important;
+  }
+
+  //Padding
+  .pa-#{$size} {
+    padding: #{$size}px !important;
+  }
+  .px-#{$size} {
+    padding-left: #{$size}px !important;
+    padding-right: #{$size}px !important;
+  }
+  .py-#{$size} {
+    padding-top: #{$size}px !important;
+    padding-bottom: #{$size}px !important;
+  }
+  .pl-#{$size} {
+    padding-left: #{$size}px !important;
+  }
+  .pr-#{$size} {
+    padding-right: #{$size}px !important;
+  }
+  .pt-#{$size} {
+    padding-top: #{$size}px !important;
+  }
+  .pb-#{$size} {
+    padding-bottom: #{$size}px !important;
+  }
+
+  //Border Radius
+  .bdr-#{$size} {
+    border-radius: #{$size}px !important;
+  }
+  .bdrl-#{$size} {
+    border-radius: #{$size}px 0 0 #{$size}px !important;
+  }
+  .bdrr-#{$size} {
+    border-radius: 0 #{$size}px #{$size}px 0 !important;
+  }
+  .bdrt-#{$size} {
+    border-radius: #{$size}px #{$size}px 0 0 !important;
+  }
+  .bdrb-#{$size} {
+    border-radius: 0 0 #{$size}px #{$size}px !important;
   }
 }

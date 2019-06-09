@@ -1,0 +1,65 @@
+$font-size: 50px;
+
+// Color
+$n4s: #282c34;
+
+// Styles Groups
+%center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center {
+  @extend %center;
+}
+
+%userNo {
+  user-select: none;
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+}
+
+.Header {
+  font-family: Prompt;
+  .logo {
+    @extend %userNo;
+    transition: 700ms linear;
+    padding-left: 20px;
+    width: 130px;
+  }
+  .logo:hover {
+    opacity: 0.5;
+  }
+
+  #barTransparent {
+    background-color: transparent;
+    padding: 5px 5px 5px 5px;
+    transition: 500ms linear;
+  }
+  #barBlack {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 5px 5px 5px;
+    transition: 700ms linear;
+  }
+}
+
+.Home {
+  .main {
+    .home-picture {
+      min-width: 100vw;
+      max-height: 100vh;
+      filter: brightness(50%);
+    }
+    .home-text {
+      @extend %center;
+      @extend %userNo;
+      height: 80vh;
+      h1 {
+        font-family: Prompt;
+      }
+    }
+  }
+}

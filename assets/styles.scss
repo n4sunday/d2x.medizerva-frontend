@@ -2,6 +2,8 @@ $font-size: 50px;
 
 // Color
 $n4s: #282c34;
+$darkfont: #737c80;
+$service: #f0f0f5;
 
 // Styles Groups
 %center {
@@ -47,6 +49,7 @@ body {
 }
 
 .Home {
+  font-family: Prompt;
   .main {
     .home-picture {
       min-width: 100vw;
@@ -61,5 +64,90 @@ body {
         font-family: Prompt;
       }
     }
+  }
+  .service {
+    @extend %userNo;
+    background-color: $service;
+    // height: 100vh;
+    .title {
+      color: $darkfont;
+    }
+  }
+}
+
+$sizes-font: 10, 12, 14, 16, 18, 20, 22, 23, 24, 25, 26, 28, 30, 32, 34, 40, 46;
+@each $size in $sizes-font {
+  .f-#{$size} {
+    font-size: #{$size}px;
+  }
+}
+$sizes: 1, 2, 3, 4, 5, 10, 12, 14, 15, 16, 18, 20, 22, 24, 25, 26, 28, 30, 32,
+  35, 38, 40, 42, 50, 55, 60, 65, 70, 75, 80, 85, 90,95;
+@each $size in $sizes {
+  // Margin
+  .ma-#{$size} {
+    margin: #{$size}px !important;
+  }
+  .mx-#{$size} {
+    margin-left: #{$size}px !important;
+    margin-right: #{$size}px !important;
+  }
+  .my-#{$size} {
+    margin-top: #{$size}px !important;
+    margin-bottom: #{$size}px !important;
+  }
+  .ml-#{$size} {
+    margin-left: #{$size}px !important;
+  }
+  .mr-#{$size} {
+    margin-right: #{$size}px !important;
+  }
+  .mt-#{$size} {
+    margin-top: #{$size}px !important;
+  }
+  .mb-#{$size} {
+    margin-bottom: #{$size}px !important;
+  }
+
+  //Padding
+  .pa-#{$size} {
+    padding: #{$size}px !important;
+  }
+  .px-#{$size} {
+    padding-left: #{$size}px !important;
+    padding-right: #{$size}px !important;
+  }
+  .py-#{$size} {
+    padding-top: #{$size}px !important;
+    padding-bottom: #{$size}px !important;
+  }
+  .pl-#{$size} {
+    padding-left: #{$size}px !important;
+  }
+  .pr-#{$size} {
+    padding-right: #{$size}px !important;
+  }
+  .pt-#{$size} {
+    padding-top: #{$size}px !important;
+  }
+  .pb-#{$size} {
+    padding-bottom: #{$size}px !important;
+  }
+
+  //Border Radius
+  .bdr-#{$size} {
+    border-radius: #{$size}px !important;
+  }
+  .bdrl-#{$size} {
+    border-radius: #{$size}px 0 0 #{$size}px !important;
+  }
+  .bdrr-#{$size} {
+    border-radius: 0 #{$size}px #{$size}px 0 !important;
+  }
+  .bdrt-#{$size} {
+    border-radius: #{$size}px #{$size}px 0 0 !important;
+  }
+  .bdrb-#{$size} {
+    border-radius: 0 0 #{$size}px #{$size}px !important;
   }
 }

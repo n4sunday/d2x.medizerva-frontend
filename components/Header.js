@@ -17,19 +17,19 @@ import {
 class Header extends React.Component {
 	state = {
 		isOpen: false,
-        isTop: true
+		isTop: true
 	}
 	toggle = this.toggle.bind(this);
-    componentDidMount() {
+	componentDidMount() {
 		document.addEventListener('scroll', () => {
-      const isTop = window.scrollY < 200;
-      
+			const isTop = window.scrollY < 200;
+
 			if (isTop !== this.state.isTop) {
 				this.setState({ isTop });
 			}
 		});
-    }
-    
+	}
+
 	toggle() {
 		this.setState({ isOpen: !this.state.isOpen });
 	}
@@ -45,27 +45,27 @@ class Header extends React.Component {
 						<Nav id="linkbar" className="ml-auto" navbar>
 							<NavItem>
 								<Link href="/">
-									<a className="nav-item nav-link active px-3">หน้าหลัก</a>
+									<a className="nav-item nav-link active px-15">หน้าหลัก</a>
 								</Link>
 							</NavItem>
 							<NavItem>
 								<Link href="/">
-									<a className="nav-item nav-link  px-3">ถามหมอ</a>
+									<a className="nav-item nav-link  px-15">ถามหมอ</a>
 								</Link>
 							</NavItem>
 							<NavItem>
 								<Link href="/">
-									<a className="nav-item nav-link  px-3">ชื้อยา</a>
+									<a className="nav-item nav-link  px-15">ชื้อยา</a>
 								</Link>
 							</NavItem>
 							<NavItem>
 								<Link href="/">
-									<a className="nav-item nav-link  px-3">โรคระบบขับถ่าย</a>
+									<a className="nav-item nav-link  px-15">โรคระบบขับถ่าย</a>
 								</Link>
 							</NavItem>
 							<NavItem>
 								<Link href="/">
-									<a className="nav-item nav-link  px-3">ติดต่อเรา</a>
+									<a className="nav-item nav-link  px-15">ติดต่อเรา</a>
 								</Link>
 							</NavItem>
 							<UncontrolledDropdown nav inNavbar>

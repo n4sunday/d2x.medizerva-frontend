@@ -2,6 +2,8 @@ $font-size: 50px;
 
 // Color
 $n4s: #282c34;
+$darkfont: #737c80;
+$service: #f0f0f5;
 
 // Styles Groups
 %center {
@@ -64,37 +66,11 @@ body {
     }
   }
   .service {
-    background-color: #f3f3f3;
-    height: 100vh;
-    .content {
-      .service-component {
-        @extend %userNo;
-        border: 0.5px solid #d1d1d1;
-        width: 300px;
-        height: 380px;
-        background-color: #fff;
-        .icon {
-          transition: 500ms linear;
-        }
-        .icon:hover {
-          opacity: 0.7;
-          transition: 500ms linear;
-        }
-        .title:hover {
-          color: #4dc9ff;
-          transition: 500ms linear;
-        }
-        .content {
-          color: #4f5052;
-        }
-      }
-      .service-component:hover {
-        box-shadow: 0px 0px 2px 0.5px rgba(0,0,0,0.1);
-      }
-      
-      .icon {
-        width: 180px;
-      }
+    @extend %userNo;
+    background-color: $service;
+    // height: 100vh;
+    .title {
+      color: $darkfont;
     }
   }
 }
@@ -106,7 +82,7 @@ $sizes-font: 10, 12, 14, 16, 18, 20, 22, 23, 24, 25, 26, 28, 30, 32, 34, 40, 46;
   }
 }
 $sizes: 1, 2, 3, 4, 5, 10, 12, 14, 15, 16, 18, 20, 22, 24, 25, 26, 28, 30, 32,
-  35, 38, 40, 42, 50, 55, 60, 65, 70;
+  35, 38, 40, 42, 50, 55, 60, 65, 70, 75, 80, 85, 90,95;
 @each $size in $sizes {
   // Margin
   .ma-#{$size} {

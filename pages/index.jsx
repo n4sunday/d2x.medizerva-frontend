@@ -34,43 +34,48 @@ const Index = () => (
           </div>
         </div>
 
-        <div className="service center">
-          <div className="content ">
-            <h1 className="f-35">บริการของเรา</h1>
-            <div className="row">
+        <div className="container-fluid service">
+          <div className="row d-block">
+            <h1 className="f-35 center title py-30">บริการของเรา</h1>
+          </div>
+
+          <div className="row pb-30">
+
+            <div className="col-xs-16 col-md-6 col-lg-3 pa-0">
               <ServiceContent
-                title="วินิจฉัยอาการออนไลน์" 
+                title="วินิจฉัยอาการออนไลน์"
                 content="กรองข้อมูลตอบคำถาม เพื่อวินิจฉัยอาการเบื้องต้น"
                 url="/static/img/service/diagnose.svg"
-                />
+              />
+            </div>
+            <div className="col-xs-16 col-md-6 col-lg-3 pa-0">
               <ServiceContent
                 title="ค้นหาโรงพยาบาลใกล้เคียง"
                 content="เปิดเส้นทางเพื่อเข้ารับการรักษาอาการของคุณ"
                 url="/static/img/service/hospital.svg"
               />
+            </div>
+            <div className="col-xs-16 col-md-6 col-lg-3 pa-0">
               <ServiceContent
                 title="บริการช่วยเหลือ 24 ชั่วโมง"
                 content="ระบบคอยตอบคำถามตลอดเวลา"
                 url="/static/img/service/hours24.svg"
               />
+            </div>
+            <div className="col-xs-16 col-md-6 col-lg-3 pa-0">
               <ServiceContent
                 title="บริการจัดส่งยารักษา"
                 content="ท่านสามารถสั่งซื้อยาพร้อมบริการจัดส่งถึงที่"
                 url="/static/img/service/pills.svg"
               />
             </div>
-            <div>
-              
-            </div>
-            
+
 
           </div>
-
+          <div>
+          </div>
         </div>
-
       </div>
-
-
     </Layout>
   </div>
 )

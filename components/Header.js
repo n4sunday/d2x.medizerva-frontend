@@ -17,19 +17,19 @@ import {
 class Header extends React.Component {
 	state = {
 		isOpen: false,
-        isTop: true
+		isTop: true
 	}
 	toggle = this.toggle.bind(this);
-    componentDidMount() {
+	componentDidMount() {
 		document.addEventListener('scroll', () => {
-      const isTop = window.scrollY < 200;
-      
+			const isTop = window.scrollY < 200;
+
 			if (isTop !== this.state.isTop) {
 				this.setState({ isTop });
 			}
 		});
-    }
-    
+	}
+
 	toggle() {
 		this.setState({ isOpen: !this.state.isOpen });
 	}

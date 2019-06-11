@@ -17,15 +17,22 @@ import {
 class Header extends React.Component {
 	state = {
 		isOpen: false,
-		isTop: true
+		isTop: true,
+		srcLogo: '/static/img/Logo_td2x-w.png'
 	}
 	toggle = this.toggle.bind(this);
 	componentDidMount() {
 		document.addEventListener('scroll', () => {
-			const isTop = window.scrollY < 200;
+			console.log(window.scrollY < 200);
+			const isTop = window.scrollY < 200
 
 			if (isTop !== this.state.isTop) {
 				this.setState({ isTop });
+				this.setState({ srcLogo: '/static/img/Logo_td2x-w.png' })
+			}
+			else if (isTop === false) {
+				this.setState({ isTop });
+				this.setState({ srcLogo: '/static/img/Logo_td2x-g.png' })
 			}
 		});
 	}
@@ -38,7 +45,7 @@ class Header extends React.Component {
 			<div className="Header">
 				<Navbar className="navbar navbar-expand-lg fixed-top" id={this.state.isTop ? this.props.t : this.props.c} dark>
 					<Link href="/">
-						<img className="logo" src="/static/img/Logo_td2x.svg" alt="image" />
+						<img className="logo" src={this.state.srcLogo} alt="image" />
 					</Link>
 					<NavbarToggler onClick={this.toggle} />
 					<Collapse isOpen={this.state.isOpen} navbar>
@@ -46,11 +53,6 @@ class Header extends React.Component {
 							<NavItem>
 								<Link href="/">
 									<a className="nav-item nav-link active px-15">หน้าหลัก</a>
-								</Link>
-							</NavItem>
-							<NavItem>
-								<Link href="/">
-									<a className="nav-item nav-link  px-15">ถามหมอ</a>
 								</Link>
 							</NavItem>
 							<NavItem>
@@ -67,39 +69,11 @@ class Header extends React.Component {
 								<Link href="/">
 									<a className="nav-item nav-link  px-15">ติดต่อเรา</a>
 								</Link>
+							</NavItem><NavItem>
+								<Link href="/">
+									<div className="help  px-25 bdr-5">ถามหมอ</div>
+								</Link>
 							</NavItem>
-							<UncontrolledDropdown nav inNavbar>
-								<div id="toggledrop">
-									<DropdownToggle nav caret>
-										จัดการบัญชีผู้ใช้
-									</DropdownToggle>
-									<div id="drop">
-										<DropdownMenu>
-											<DropdownItem>
-												<Link href="/">
-													<a>ข้อมูลผู้ใช้</a>
-												</Link>
-											</DropdownItem>
-											<DropdownItem>
-												<Link href="/">
-													<a>ลงชื่อเข้าใช้</a>
-												</Link>
-											</DropdownItem>
-											<DropdownItem>
-												<Link href="/">
-													<a>สมัครสมาชิก</a>
-												</Link>
-											</DropdownItem>
-											<DropdownItem divider />
-											<DropdownItem>
-												<Link href="/">
-													<a>ออกจากระบบ</a>
-												</Link>
-											</DropdownItem>
-										</DropdownMenu>
-									</div>
-								</div>
-							</UncontrolledDropdown>
 						</Nav>
 					</Collapse>
 				</Navbar>

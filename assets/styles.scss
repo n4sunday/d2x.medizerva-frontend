@@ -4,6 +4,8 @@ $font-size: 50px;
 $n4s: #282c34;
 $darkfont: #737c80;
 $service: #f0f0f5;
+$theme: #4dc9ff;
+$fontbar: #737c80;
 
 // Styles Groups
 %center {
@@ -34,18 +36,49 @@ body {
   }
   .logo:hover {
     opacity: 0.5;
+    
   }
 
   #barTransparent {
     background-color: transparent;
     padding: 5px 5px 5px 5px;
     transition: 500ms linear;
+    .help {
+      @extend %userNo;
+      color: #fff;
+      border: 2px solid #fff;
+      padding: .5rem 1rem;
+    }
+    .help:hover {
+      opacity: 0.7;
+    }
   }
   #barBlack {
-    background: rgba(0, 0, 0, 0.6);
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;
     padding: 5px 5px 5px 5px;
-    transition: 700ms linear;
+    transition: 500ms linear;
+    .help {
+      @extend %userNo;
+      color: $theme;
+      border: 2px solid $theme;
+      padding: .5rem 1rem;
+    }
+    .help:hover {
+      color: #fff;
+      background-color: $theme;
+    }
+    .nav-item {
+      color: $fontbar!important;
+    }
+    .navbar-toggler {
+      border: 1px solid $fontbar;
+    }
+    .navbar-toggler-icon {
+      -webkit-filter: drop-shadow(0px 1px 0px #000);  
+    }
   }
+  
 }
 
 .Home {

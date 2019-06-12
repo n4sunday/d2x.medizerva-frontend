@@ -15,7 +15,7 @@ class MyApp extends App {
     return (
       <div className="my-app">
         <Head>
-          <title>Next.js</title>
+          <title>d2x medizerva</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"></link>
           <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet"></link>

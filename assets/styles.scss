@@ -6,6 +6,7 @@ $darkfont: #737c80;
 $service: #f0f0f5;
 $theme: #4dc9ff;
 $fontbar: #737c80;
+$darkGreen: #1d3f4d;
 
 // Styles Groups
 %center {
@@ -50,7 +51,8 @@ body {
       padding: .5rem 1rem;
     }
     .help:hover {
-      opacity: 0.7;
+      transition: 200ms linear;
+      background-color: $theme;
     }
   }
   #barBlack {
@@ -70,6 +72,10 @@ body {
     }
     .nav-item {
       color: $fontbar!important;
+      transition: opacity 0.2s;
+    }
+    .nav-item:hover {
+      color: #b6b6b6!important;
     }
     .navbar-toggler {
       border: 1px solid $fontbar;
@@ -106,6 +112,21 @@ body {
       color: $darkfont;
     }
   }
+  .doctor-team {
+    background-color: #fff;
+    .title {
+      // background-color: $theme;
+      // color: #fff;
+    }
+  }
+}
+@media(max-width:992px) {
+  .Home {
+    .title {
+      font-size:34px;
+    }
+  }
+  
 }
 
 $sizes-font: 10, 12, 14, 16, 18, 20, 22, 23, 24, 25, 26, 28, 30, 32, 34, 40, 46;

@@ -39,7 +39,19 @@ const ServiceContent = ({ title, content, url }) => {
                     color: #4dc9ff;
                     transition: 500ms linear;
                 }
-                
+                @media(max-width:1199px) {
+                    .service-component {
+                        background: #fff;
+                        min-width: 240px;
+                        margin-left: 0 !important;
+                        margin-right: 0 !important;
+                        height: 340px;
+                        border: 0.5px solid #d1d1d1;
+                    }
+                    .title {
+                        font-size: 18px;
+                    }
+                }
                 @media(max-width:992px) {
                     .service-component {
                         max-height: 260px;

@@ -1,6 +1,7 @@
 import Layout from '../components/Layout'
 import Typed from 'react-typed'
 import ServiceContent from '../components/service-content'
+import DoctorTeam from '../components/doctor-team'
 
 const Index = () => (
   <div>
@@ -74,6 +75,34 @@ const Index = () => (
           </div>
           <div>
           </div>
+        </div>
+
+        <div className="container doctor-team">
+          <div className="row d-block">
+            <h1 className="f-35 center title py-30">พบกับทีมแพทย์ของเรา</h1>
+          </div>
+
+          <div className="row pb-30">
+
+            <div className="col-xs-12 col-md-6 col-lg-3 center">
+              <DoctorTeam name="Jessica Wally" position="Doctor" url="/static/img/doctor/doctor1.jpg" />
+            </div>
+
+            <div className="col-xs-12 col-md-6 col-lg-3 center">
+              <DoctorTeam name="Iai Donas" position="Doctor" url="/static/img/doctor/doctor2.jpg" />
+            </div>
+
+            <div className="col-xs-12 col-md-6 col-lg-3 center">
+              <DoctorTeam name="Amanda Denyl" position="Doctor" url="/static/img/doctor/doctor3.jpg" />
+            </div>
+
+            <div className="col-xs-12 col-md-6 col-lg-3 center">
+              <DoctorTeam name="Jason Davis" position="Doctor" url="/static/img/doctor/doctor4.jpg" />
+            </div>
+
+          </div>
+          
+
         </div>
       </div>
     </Layout>

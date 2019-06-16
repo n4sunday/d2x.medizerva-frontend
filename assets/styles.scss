@@ -55,7 +55,7 @@ body {
       background-color: $theme;
     }
   }
-  #barBlack {
+  #barWhite {
     background: #fff;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;
     padding: 5px 5px 5px 5px;
@@ -67,6 +67,7 @@ body {
       padding: .5rem 1rem;
     }
     .help:hover {
+      transition: 200ms linear;
       color: #fff;
       background-color: $theme;
     }
@@ -143,7 +144,8 @@ $sizes: 1, 2, 3, 4, 5, 10, 12, 14, 15, 16, 18, 20, 22, 24, 25, 26, 28, 30, 32,
     margin: #{$size}px !important;
   }
   .mx-#{$size} {
-    margin-left: #{$size}px !important;
+    margin-left: #{$size}px
+    ;
     margin-right: #{$size}px !important;
   }
   .my-#{$size} {

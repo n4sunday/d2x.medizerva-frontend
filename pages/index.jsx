@@ -5,15 +5,15 @@ import DoctorTeam from '../components/doctor-team'
 
 const Index = () => (
   <div>
-    <Layout>
+    <Layout t="barTransparent" c="barWhite">
       <div className="Home">
 
         <div className="main">
-          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
+          <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
+            <div className="carousel-inner">
+              <div className="carousel-item active">
                 <img className="home-picture" src="/static/img/Home.jpg" alt="image" />
-                <div class="carousel-caption d-none d-md-block">
+                <div className="carousel-caption d-none d-md-block">
                   <div className="home-text">
                     <section>
                       <h1 className="font-weigth-bold "><Typed

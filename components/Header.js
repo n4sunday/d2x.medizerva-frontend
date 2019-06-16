@@ -22,18 +22,19 @@ class Header extends React.Component {
 	}
 	toggle = this.toggle.bind(this);
 	componentDidMount() {
+		if (this.props.t == 'barWhite')
+					this.setState({ srcLogo: '/static/img/Logo_td2x-g.png' })
 		document.addEventListener('scroll', () => {
 			console.log(window.scrollY < 200);
+			
 			const isTop = window.scrollY < 200
-
-			if (isTop !== this.state.isTop) {
-				this.setState({ isTop });
+			if (isTop === true && this.props.t!=='barWhite') {
 				this.setState({ srcLogo: '/static/img/Logo_td2x-w.png' })
 			}
 			else if (isTop === false) {
-				this.setState({ isTop });
 				this.setState({ srcLogo: '/static/img/Logo_td2x-g.png' })
 			}
+			this.setState({ isTop })
 		});
 	}
 
@@ -70,7 +71,7 @@ class Header extends React.Component {
 									<a className="nav-item nav-link  px-15">ติดต่อเรา</a>
 								</Link>
 							</NavItem><NavItem>
-								<Link href="/">
+								<Link href="/help">
 									<div className="help  px-25 bdr-5">ถามหมอ</div>
 								</Link>
 							</NavItem>

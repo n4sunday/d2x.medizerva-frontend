@@ -1,13 +1,15 @@
-const HelpLink = ({ title, pathImg, pathLogo,}) => {
+import Link from 'next/link'
+const HelpLink = ({ title, pathImg, pathLogo,link }) => {
     return (
-        <div className="helplink ">
-            <div className="box-img">
-                <div className="title">{title}</div>
-                <img className="logo" src={pathLogo} alt="image" />
-            </div>
-            <img className="imglink" src={pathImg} alt="image" />
+        <Link href={link}>
+            <div className="helplink ">
+                <div className="box-img">
+                    <div className="title">{title}</div>
+                    <img className="logo" src={pathLogo} alt="image" />
+                </div>
+                <img className="imglink" src={pathImg} alt="image" />
 
-            <style jsx>{`
+                <style jsx>{`
                 .helplink {
                     cursor: pointer;
                     margin: 15px;
@@ -49,7 +51,8 @@ const HelpLink = ({ title, pathImg, pathLogo,}) => {
                 }
                 
             `}</style>
-        </div>
+            </div>
+        </Link>
     )
 }
 export default HelpLink

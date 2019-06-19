@@ -2,7 +2,7 @@ import Header from './Header';
 const Layout = (props) => {
 	return (
 		<div>
-			<Header t="barTransparent" c="barBlack" />
+			<Header t={props.t} c={props.c} />
 			{props.children}
 		</div>
 	);
